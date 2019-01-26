@@ -26,6 +26,7 @@
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-core": "7.0.0-bridge.0",
     "lint-staged": "^8.1.0",
+    "prettier": "^1.16.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "ts-jest": "^23.0.0",
@@ -37,10 +38,12 @@
   },
   "lint-staged": {
     "*.ts": [
+      "prettier --write",
       "vue-cli-service lint",
       "git add"
     ],
     "*.vue": [
+      "prettier --write",
       "vue-cli-service lint",
       "git add"
     ]
